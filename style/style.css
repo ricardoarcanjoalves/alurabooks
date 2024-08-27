@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@100;200;300;400;500;600&display=swap');
+
+@import url(header.css);
+@import url(carrossel.css);
+@import url(sessao-um.css);
+@import url(sessao-dois.css);
+@import url(sessao-azul.css);
+@import url(sessao-contato.css);
+
+/*"Poppins", sans-serif;*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --fonte-padrao: "Poppins", sans-serif;
+    --background-color: #EBECEE;
+    --fundo-branco: #FFFFFF;
+    --cor-laranja: #EB9B00;
+    --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --azul: #002F52;
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: var(--fonte-padrao);
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+footer{
+    background-color: var(--fundo-branco);
+    border-top: 1px solid var(--azul);
+
+}
+
+.footer-h2{
+    color: var(--azul);
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.footer-p:hover{
+    text-decoration: solid;
+}
+
+.container-footer{
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .footer-h2{
+        color: black;
+        padding: 1rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .container-footer{
+        display: block;
+    }
+
+    .lista-titulo{
+        color: gray;
+        list-style-type: none;
+        margin-bottom: 1rem;
+    }
+
+    .lista-educacao-item, .lista-educacao-online-item, .lista-comunidade-item{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    footer{
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem 0;
+        background-color: #F9F9F9;
+    }
+
+    .container-footer{
+        display: flex;
+    }
+
+    .container-educacao-online{
+        margin: 0 5rem;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .container-educacao, .container-educacao-online, .container-comunidade{
+        border-left: 1px solid gray;
+        padding-left: 1.5rem;
+    }
+}
+
+

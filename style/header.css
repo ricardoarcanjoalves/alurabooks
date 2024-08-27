@@ -1,0 +1,165 @@
+:root{
+    --fonte-padrao: "Poppins", sans-serif;
+    --background-color: #EBECEE;
+    --fundo-branco: #FFFFFF;
+    --cor-laranja: #EB9B00;
+    --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+}
+
+header{
+    background-color: var(--fundo-branco);
+    height: 80px;
+}
+
+.menu-hamburguer{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../assets/Menu.svg);
+    background-repeat: no-repeat;
+}
+
+.menu-nav{
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.div-dois-icones, .div-tres-icones{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lista-menu-omisso{
+    display: none;
+    position: absolute;
+    top: 100%;
+    list-style-type: none;
+    left: 0;
+}
+
+.container-menu-omisso{
+    display: none;
+}
+
+.container-menu-omisso:checked~.lista-menu-omisso{
+    display: block;
+}
+
+.lista-menu-omisso-titulo, .lista-menu-omisso-item{
+    padding: 0.5rem;
+    background-color: var(--fundo-branco);
+    width: 60vw;
+    font-size: 1rem;
+}
+
+.lista-menu-omisso-titulo-link{
+    color: var(--cor-laranja);
+    font-weight: bold;
+}
+
+.lista-menu-omisso-link{
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.lista-ipad, .titulo-ipad{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .titulo-ipad{
+        color: black;
+        display: block;
+        font-size: 1.8rem;
+    }
+
+    .lista-ipad{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lista-ipad-item{
+        color: black;
+        text-decoration: none;
+        list-style-type: none;
+        padding: 1rem;
+    }
+
+    .icone-favoritos{
+        display: none;
+    }
+
+    .menu-hamburguer{
+        display: none;
+    }
+
+    .div-tres-icones{
+        gap: 5rem;
+    }
+
+    #menu-ipad:checked ~ .lista-menu-omisso{
+        display: block;
+        left: 36%;
+        top: 65%;
+    }
+
+    #menu-ipad{
+        display: none;
+    }
+
+    .lista-desktop{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .div-tres-icones{
+        display: none;
+    }
+
+    .lista-desktop{
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    .lista-desktop-item{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .lista-desktop-item-h3, .lista-ipad-item{
+        font-size: 1.25rem;
+        color: black;
+        font-weight: 400;
+    }
+
+    .lista-ipad{
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+    }
+
+    header{
+        padding: 0.5rem;
+    }
+
+    .titulo-ipad{
+        color: black;
+        display: block;
+        font-size: 1.8rem;
+        margin-right: 2rem;
+    }
+
+}
+
+
+
+    

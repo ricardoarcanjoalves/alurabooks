@@ -1,0 +1,58 @@
+.sessao-um{
+    background: var(--azul-degrade);
+    color: #FFFFFF;
+    height: 215px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.sessao-um-p{
+    width: 80%;
+    text-align: center;
+}
+
+.sessao-um-h2{
+    font-weight: bold;
+    font-size: 1.12rem;
+}
+
+#sessao-um-pesquisa{
+    background-color: transparent;
+    border-radius: 2rem;
+    border: 1px solid white;
+    padding: 1rem;
+    width: 90%;
+    color: var(--fundo-branco);
+}
+
+#sessao-um-pesquisa::placeholder{
+    font-family: var(--fonte-padrao);
+    font-size: 0.8rem;
+    color: white;
+    text-align: center;
+    background: url(../assets/Lupa.svg) no-repeat;
+    background-position: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .sessao-um-h2{
+        font-size: 2.25rem;
+    }
+
+    #sessao-um-pesquisa{
+        width: 50%;
+    }
+
+    #sessao-um-pesquisa::placeholder{
+        background-position: 7rem;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    #sessao-um-pesquisa{
+        width: 30%;
+    }
+}
